@@ -39,19 +39,21 @@ char *loadFileMem(char *fname, int *fsize, int encrypt, char *key, int keySize);
 #define MaxHeaderLength (4096*2)
 #define MaxURLLength	(1024*2)
 #include "strlist.h"
-typedef struct _Req_
-{
-	int ReqID;
-	char Method[8];
-	char ContentType[100];
-	char URL[MaxURLLength];
-	char Cookies[MaxHeaderLength];
-	char *Content;
-	int ContentSize;
-}TReq, *PReq;
+
+typedef struct _Req_ {
+    int ReqID;
+    char Method[8];
+    char ContentType[100];
+    char URL[MaxURLLength];
+    char Cookies[MaxHeaderLength];
+    char *Content;
+    int ContentSize;
+} TReq, *PReq;
 
 int encodeReq(PReq req, char *target);
+
 int decodeReq(const char *reqStr, char *content, PReq req);
+
 PStrList queryStrToList(const char *queryStr);
 
 int delFileHead(int fd, int size);

@@ -1,7 +1,7 @@
 #ifndef HID_iCLASS_H
 #define HID_iCLASS_H
 
-#ifndef BYTE 
+#ifndef BYTE
 #define BYTE unsigned char
 #endif
 
@@ -17,19 +17,19 @@
 #define U32 unsigned int
 #endif
 
-#ifndef FALSE 
+#ifndef FALSE
 #define FALSE 0 
-#endif 
+#endif
 
 #ifndef TRUE
 #define TRUE 1
-#endif 
+#endif
 
 //Generate Select_Card parameter: rdKeyLocCdTp
 #define RDKEYLOCCDTP(a,b) ( ( ( (U8)a & 0x07 ) << 4 ) | b )
 
 //Generate Page_Select command parameter :rdKeyLocCdKeyPgNum
-#define RDKEYLOCCDKEYPGNUM(a,b,c) ( (((U8)a & 0x07) << 5) |((U8)b << 4) | ((U8)c & 0x0F) ) 
+#define RDKEYLOCCDKEYPGNUM(a,b,c) ( (((U8)a & 0x07) << 5) |((U8)b << 4) | ((U8)c & 0x0F) )
 
 #define BLOCKSIZE 8	//bytes of a block in card
 #define AREA1_ENDBLOCK_16K_16 19
@@ -82,21 +82,31 @@ extern U8 gProtocolType;
 extern const U8 DefaultSecretKey[16][8];
 extern char *AREA[4];
 
-int (* iCLASS_raw_read)();
-int  (* iCLASS_raw_write)(int value);
-int (* iCLASS_raw_poll)();
-int (* iCLASS_raw_flush_output)();
-void (* iCLASS_raw_close)();
-int (* iCLASS_raw_flush_input)();
+int (*iCLASS_raw_read)();
+
+int (*iCLASS_raw_write)(int value);
+
+int (*iCLASS_raw_poll)();
+
+int (*iCLASS_raw_flush_output)();
+
+void (*iCLASS_raw_close)();
+
+int (*iCLASS_raw_flush_input)();
 
 int iCLSCheckReader(void);
+
 int iCLASS_GetSN(U8 *serNum);
-int iCLASS_Read(U8 pageNum,U8 addr,U8 blocks,U8 rdKeyLoc, U8 selectCardArea, U8* blockData);
-int iCLASS_Write(U8 pageNum,U8 addr,U8 blocks,U8 rdKeyLoc, U8 selectCardArea, U8* writeData);
+
+int iCLASS_Read(U8 pageNum,U8 addr,U8 blocks,U8 rdKeyLoc, U8 selectCardArea, U8 *blockData);
+
+int iCLASS_Write(U8 pageNum,U8 addr,U8 blocks,U8 rdKeyLoc, U8 selectCardArea, U8 *writeData);
+
 int iCLASS_GetReaderCFG(U8 *cfg);
+
 int iCLASS_GetCardCFG(U8 *cfg); //8 byte configuration data from block 1 of page 0 of card
 int iCLASS_SetBaudRate(U32);
-int LoadKeyIntoReader(const U8 * secretKey, U8 rdKeyLoc);
+
+int LoadKeyIntoReader(const U8 *secretKey, U8 rdKeyLoc);
 
 #endif
-

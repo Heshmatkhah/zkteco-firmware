@@ -64,11 +64,10 @@
 #define Timer_Minute	2
 #define Timer_Hour	3
 
-typedef struct _TAG_MSG
-{
-	void *Object;
-	int Message;
-	int Param1,Param2;
+typedef struct _TAG_MSG {
+    void *Object;
+    int Message;
+    int Param1, Param2;
 } TMsg, *PMsg;
 
 //a message process handle will process a interested event and 
@@ -79,14 +78,18 @@ void EnableMsgType(int MsgType, int Enabled);
 
 //wait a event and get it, return the message
 int GetMsg(PMsg msg);
+
 //test if have a event, return the message or 0
 int GatherMsgs(PMsg msg);
+
 //call all registered message handle, if there is no handle
 //process it return 0, else return 1. Only the top handle can 
 //process the interested messages.
 int ProcessMsg(PMsg msg);
+
 //translate a message
 int TranslateMsg(int MsgType, PMsg msg);
+
 //waiting and process events util ExitCommand occurred
 int DoMsgProcess(void *Obj, int ExitCommand);
 
@@ -94,9 +97,13 @@ U32 SelectNewMsgMask(U32 newmsk);
 
 //Register a custom message process function
 int RegMsgProc(PMsgProc MsgProc);
+
 int RegMsgProcBottom(PMsgProc MsgProc);
+
 int UnRegMsgProc(int index);
+
 int TestEnabledMsg(int MsgType);
+
 int HasInputControl(void);
 
 #define ConstructMSG(msg,MSG,P1,P2) \

@@ -169,7 +169,7 @@
 #define CMD_GET_COUNT 		203
 
 //command for register a event notification
-#define CMD_REG_EVENT		500	
+#define CMD_REG_EVENT		500
 
 // command for connect and device control
 #define CMD_CONNECT 		1000	/* connect request */
@@ -188,7 +188,7 @@
 #define CMD_CAPTUREIMAGE	1012    /* Capture a full fingerprint image */
 #define CMD_REFRESHDATA		1013	/* Reload data from rom to cache */
 #define CMD_REFRESHOPTION	1014	/* Refresh Options */
-#define CMD_CALC_FINGER		1015	
+#define CMD_CALC_FINGER		1015
 #define CMD_RUN_PRG		1016
 #define CMD_TESTVOICE		1017
 #define CMD_GET_FLASHID		1018
@@ -241,6 +241,7 @@
 #define CMD_LARGE_FINGER_UPDATEFLAG	2222     /*高速上传50000指纹标识*/
 
 typedef int (*SendDataProc)(void *buf, int size, void *param);
+
 typedef int (*CloseSessionProc)(void *param);
 
 #define EF_ATTLOG	1
@@ -256,7 +257,7 @@ typedef int (*CloseSessionProc)(void *param);
 #define EF_HIDNUM	(1<<10)		//射频卡号码
 #define EF_WRITECARD    (1<<11)         //写卡成功
 #define EF_EMPTYCARD    (1<<12)         //清除卡成功
-#define EF_DELTEMPLATE  (1<<13)    
+#define EF_DELTEMPLATE  (1<<13)
 #define EF_ALARMOFF	(1<<14)		//报警被解除
 
 #define SENDER_LEN	16
@@ -303,7 +304,7 @@ typedef struct _comm_session_{
 }TCommSession, *PCommSession;
 */
 
-typedef struct _comm_session_{
+typedef struct _comm_session_ {
 	int SessionID;
 	int StartTime;
 	int LastActive;
@@ -319,20 +320,20 @@ typedef struct _comm_session_{
 	BYTE VerifyFingerID;
 	SendDataProc Send;
 	char Sender[SENDER_LEN];
-	char MsgBuffer[MAX_MSGBUFFER_SIZE];			//事件内容缓存
-	int MsgLength[MAX_BUFFER_MSG];	//事件内容的长度
-	int MsgStartAddress[MAX_BUFFER_MSG];//事件内容的起始地址
-	int MsgLast;			//正在传送的事件的序号
-	int MsgCount;			//等待传送的事件个数
-	int MsgCached;			//是否缓存事件数据
+	char MsgBuffer[MAX_MSGBUFFER_SIZE]; //事件内容缓存
+	int MsgLength[MAX_BUFFER_MSG]; //事件内容的长度
+	int MsgStartAddress[MAX_BUFFER_MSG]; //事件内容的起始地址
+	int MsgLast; //正在传送的事件的序号
+	int MsgCount; //等待传送的事件个数
+	int MsgCached; //是否缓存事件数据
 	int TimeOutSec;
-	
+
 	CloseSessionProc Close;
 	char Interface[16];
-	int fdCacheData; //dsl.2011.10.27.Batch cached file handle	
-}TCommSession, *PCommSession;
+	int fdCacheData; //dsl.2011.10.27.Batch cached file handle
+} TCommSession, *PCommSession;
 
-/*  PC->Device 
+/*  PC->Device
 
 Reply ID is a flag to identify the replayed data from device. So while send data
 to device, let ReplyID++ to keep every cmd have a different id.
@@ -348,20 +349,28 @@ to device, let ReplyID++ to keep every cmd have a different id.
 |       CMD       |    Check Sum    |      Data1      |     Reply ID    |Data2
 CMD=CMD_ACK_OK,CMD_ACK_ERROR,CMD_DATA,CMD_UNKNOWN
 */
-typedef struct _CmdHdr_{
+typedef struct _CmdHdr_ {
 	unsigned short Command, CheckSum, SessionID, ReplyID;
-}GCC_PACKED TCmdHeader, *PCmdHeader;
+}
+				GCC_PACKED TCmdHeader, *PCmdHeader;
 
 int CheckSessionSend(int EventFlag, char *Data, int Len);
+
 PCommSession CheckSessionVerify(int *PIN, int *FingerID);
 
 int RunCommand(void *buf, int size, int CheckSecury);
+
 PCommSession CreateSession(void *param);
+
 int CheckSessionTimeOut(void);
+
 PCommSession GetSession(int SessionID);
+
 int FreeSession(int SessionID);
+
 int CheckSessionSendMsg(void);
+
 void SendLargeDataByFile(char *in_buf, PCommSession session, int offset, int size);
+
 void SendLargeData(char *in_buf, PCommSession session, char *buf, int size);
 #endif
-

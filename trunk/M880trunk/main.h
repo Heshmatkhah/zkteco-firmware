@@ -12,14 +12,15 @@ char *gImageBuffer;
 TTime gCurTime;
 TTime gMinTime;
 
-TTime gAuthServerTime;	//zsliu add 
+TTime gAuthServerTime; //zsliu add
 
-typedef struct _VSStatus_{
-	BOOL PIN;
-	BOOL FP;
-	BOOL Password;
-	BOOL Card;
-}GCC_PACKED TVSStatus, *PVSStatus;
+typedef struct _VSStatus_ {
+    BOOL PIN;
+    BOOL FP;
+    BOOL Password;
+    BOOL Card;
+}
+                GCC_PACKED TVSStatus, *PVSStatus;
 
 #define ZEM500
 //#define UPEK
@@ -57,23 +58,21 @@ typedef struct _VSStatus_{
 #define OneMinute  (1*60)//1/(24*60)
 #define OneDay (24*60*60)
 
-typedef struct _tag_Clock
-{
-        short Year;
-        short Mon;
-        short Day;
-        short Hour;
-        short Min;
-        short Sec;
-	short Week;
-	short YDay;     // days since Jan 1, 1-366 //add by zsliu for Hejira 080730
+typedef struct _tag_Clock {
+    short Year;
+    short Mon;
+    short Day;
+    short Hour;
+    short Min;
+    short Sec;
+    short Week;
+    short YDay; // days since Jan 1, 1-366 //add by zsliu for Hejira 080730
 }
 Clock;
 
-typedef struct _tag_FpImage
-{
-        unsigned char BitMap[MAXFPIMGSIZE];
-        unsigned long Width,Height;
+typedef struct _tag_FpImage {
+    unsigned char BitMap[MAXFPIMGSIZE];
+    unsigned long Width, Height;
 }
 FpImage;
 #if 0
@@ -127,12 +126,19 @@ inline unsigned long DelaySecssr(unsigned long sec)
 
 //void ShowMainLCD(HWND hWnd);
 void EnableDevice(int Enabled);
+
 void ExSetPowerSleepTime(int IdleMinute);
+
 int ShowFPAnimate(int x, int y);
+
 int isShortKey(int wParam);
+
 void GetClockDT(Clock *clock);
+
 void child_end(int signum);
+
 void TriggerDuress(U16 pin, int verified);
+
 int GetNoNcState(void);
 
 int EnterIsSTkey(int wParam);
@@ -146,15 +152,16 @@ int cameraflag;
 U32 picid;
 int second_msg; //2012-3-9 for exit verification window
 
-int useSDCardFlag;	//是否使用SDCard
+int useSDCardFlag; //是否使用SDCard
 
 //定制功能标志
-int IDTFlag;	//西班牙定刄1?7
-int SRLFlag;	//罗马尼亚定制
+int IDTFlag; //西班牙定刄1?7
+int SRLFlag; //罗马尼亚定制
 
 
 //-------  PUSH_SDK -----------
 void iclock_statechanged(void);
+
 void iClock_Invoke();
 
 extern int exceedflag;

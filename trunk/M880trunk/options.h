@@ -95,8 +95,8 @@
 #endif
 extern int gMachineState;
 
-extern int battery_fd;  // 文件句柄
-extern unsigned char battery_state;  // 检测到电池变化时，为避免丢失消息，就多检测几次，另外，用于检测电池的最大值
+extern int battery_fd; // 文件句柄
+extern unsigned char battery_state; // 检测到电池变化时，为避免丢失消息，就多检测几次，另外，用于检测电池的最大值
 
 /*
  *	1. Ver 6.50 （不包括Ver 6.50 )以前的，只支持9.0算法。
@@ -133,7 +133,7 @@ extern unsigned char battery_state;  // 检测到电池变化时，为避免丢失消息，就多检
 //#define MAINVERSIONTFT  "Ver 6.4.1(build 16)"	//解决wifi 死机，浏览图片显示重叠，考勤照片刷卡时内存泄漏，键盘自定义可以大于16个字符，高速上传用户混乱的问题
 //解决联机登记的时候，如果指纹质量不够，这个时候，固件会提示请重按手指，但是界面没有推出的bug
 //解决打开后台验证的时候，界面不刷新的bug, 这个问题具体是时间不能刷新，界面不动，这个问题现在已经解决。
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 17)" 
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 17)"
 //#define MAINVERSIONTFT  "Ver 6.4.1(build 18)"	//解决纯9.0机器，升级新的固件，没有质量这个界面，3.5寸彩屏机器默认都有U盘功能。
 //#define MAINVERSIONTFT  "Ver 6.4.1(build 19)"	//解决联机登记问题不能退出的情况，解决查看考勤记录的时候，考勤状态有问题的bug,
 //#define MAINVERSIONTFT  "Ver 6.4.1(build 20)"	//更改保存照片的时候，使用日期文件夹存储的方式保存，不再使用只有一个文件夹，解决死机问题。
@@ -151,9 +151,9 @@ extern unsigned char battery_state;  // 检测到电池变化时，为避免丢失消息，就多检
 /*
    1. GPRS
    2. ADMS
-   3. Wiegand out 
+   3. Wiegand out
    */
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 26)"		
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 26)"
 //#define MAINVERSIONTFT  "Ver 6.4.1(build 27)"  //主要添加GPRS部分，移交测试部
 //#define MAINVERSIONTFT  "Ver 6.4.1(build 28)" //解决B3机器按power键关机后，在按power键不能开机、解决定时响铃功能改变音量后不起作用Bug
 //#define MAINVERSIONTFT  "Ver 6.4.1(build 29)" //解决带ADMS功能同时加TTS功能，在设置WEBSERVER的IP地址后返回主界面，当按menu键进入界面后死机问题
@@ -185,7 +185,7 @@ extern unsigned char battery_state;  // 检测到电池变化时，为避免丢失消息，就多检
  ** 更改 TextOut(hdc,x+(130-strlen((char *)temp)*8)/2,y+8,(char *)temp);
  ** 为TextOut(hdc,x+(130-strlen((char *)mystkey.stateName)*8)/2,y+8,(char *)temp);
  ****************************************/
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 45)" 
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 45)"
 /****************************************
  ** 提交日期：2010年4月20日
  ** 提交者：王伟
@@ -206,31 +206,31 @@ extern unsigned char battery_state;  // 检测到电池变化时，为避免丢失消息，就多检
  ** 版本号：Ver 6.4.1(build 47)
  ** 更改文件为：
  ** logquery.c  ssrsystem1.c ssrcgroupmng.c main.c ssrsystem3.c  ssrstkey.c
- ** 
+ **
  ** SVN  -r 1264
  ****************************************/
 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 47)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 54)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 57)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 58)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 61)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 62)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 63)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 64)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 65)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 66)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 67)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 68)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 69)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 70)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 71)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 72)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 73)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 74)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 75)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 92)" 
-//#define MAINVERSIONTFT  "Ver 6.4.1(build 98)" 
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 47)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 54)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 57)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 58)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 61)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 62)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 63)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 64)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 65)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 66)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 67)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 68)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 69)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 70)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 71)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 72)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 73)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 74)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 75)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 92)"
+//#define MAINVERSIONTFT  "Ver 6.4.1(build 98)"
 /*******************************************************************
  ** 提交日期：2011年8月30日
  ** 提交者：杨小龙
@@ -238,9 +238,9 @@ extern unsigned char battery_state;  // 检测到电池变化时，为避免丢失消息，就多检
  **		1.BS考勤固件完善项目新增功能
  **
  ** 版本号：Ver 6.5.0(build 99)
- ** 
+ **
  ****************************************/
-//#define MAINVERSIONTFT  "Ver 6.5.1(build 99)" 
+//#define MAINVERSIONTFT  "Ver 6.5.1(build 99)"
 /*******************************************************************
  ** 提交日期：2011年9月17日
  ** 提交者：杨小龙
@@ -250,18 +250,18 @@ extern unsigned char battery_state;  // 检测到电池变化时，为避免丢失消息，就多检
  Aborted
  **2.解决当网络异常或者服务器超时时，异地考勤和后台比对反应慢的问题
  **版本号：Ver 6.5.2(build 100)
- ** 
+ **
  ****************************************/
-//#define MAINVERSIONTFT  "Ver 6.5.2(build 100)" 
+//#define MAINVERSIONTFT  "Ver 6.5.2(build 100)"
 /*******************************************************************
  ** 提交日期：2011年9月17日
  ** 提交者：杨小龙
  ** 主要目的：
  **1.BS考勤完善项目提交生产固件版本
  **版本号：Ver 6.5.2(build 100)
- ** 
+ **
  ****************************************/
-//#define MAINVERSIONTFT  "Ver 6.5.3(build 102)" 
+//#define MAINVERSIONTFT  "Ver 6.5.3(build 102)"
 /*******************************************************************
  ** 提交日期：2011年9月17日
  ** 提交者：杨小龙
@@ -270,16 +270,16 @@ extern unsigned char battery_state;  // 检测到电池变化时，为避免丢失消息，就多检
  **
  **2.优化设备处理服务器下发大数据量的速度
  **版本号：Ver 6.5.3(build 103)
- ** 
+ **
  ****************************************/
-//#define MAINVERSIONTFT  "Ver 6.5.3(build 103)" 
+//#define MAINVERSIONTFT  "Ver 6.5.3(build 103)"
 /*******************************************************************
  ** 提交日期：2011年10月28日
  ** 提交者：罗小文
  ** 主要目的：
  **1.增加新3G功能，使用libmodem.so库支持GPRS、CDMA、WCDMA、TDS-CDMA
  **版本号：Ver 6.5.4(build 104)
- ** 
+ **
  ****************************************/
 //#define MAINVERSIONTFT  "Ver 6.5.4(build 104)"
 //#define MAINVERSIONTFT  "Ver 6.5.4(build 105)"
@@ -309,531 +309,552 @@ extern unsigned char battery_state;  // 检测到电池变化时，为避免丢失消息，就多检
 //dsl 2011.5.7
 //#define FORFACTORY
 
-enum __SHORT_KEY_{
-	STK_UNDEFINED=0,
-	STK_STATE,
-	STK_WORKCODE,
-	STK_EMS,
-	STK_HELP,
-	STK_UPDTHEME,
-	STK_USERMGMT,
-	STK_NEWUSER,
-	STK_MANAGEUSER,
-	STK_COMMMGMT,
-	STK_NETWORK,
-	STK_RS232,
-	STK_SECURITY,
-	STK_SYSTEM,
-	STK_SYSTEMSET,
-	STK_DATA,
-	STK_UPDATE,
-	STK_KEYBOARD,
-	STK_DISPLAY,
-	STK_POWERMGMT,
-	STK_RESET,
-	STK_BELL,
-	STK_DATETIME,
-	STK_PENDRIVE,
-	STK_DWNRECORD,
-	STK_DWNUSER,
-	STK_UPLUSER,
-	STK_UPLPICTURE,
-	STK_DWNEMS,
-	STK_UPLEMS,
-	STK_UPLTHEME,
-	STK_AUTOTEST,
-	STK_RECORD,
-	STK_SYSINFO,
-	STK_TIMEZONE,
-	STK_HOLIDAY,
-	STK_GROUP,
-	STK_UNLOCKGROUP,
-	STK_ACCESS,
-	STK_DURESS=39,
+enum __SHORT_KEY_ {
+    STK_UNDEFINED = 0,
+    STK_STATE,
+    STK_WORKCODE,
+    STK_EMS,
+    STK_HELP,
+    STK_UPDTHEME,
+    STK_USERMGMT,
+    STK_NEWUSER,
+    STK_MANAGEUSER,
+    STK_COMMMGMT,
+    STK_NETWORK,
+    STK_RS232,
+    STK_SECURITY,
+    STK_SYSTEM,
+    STK_SYSTEMSET,
+    STK_DATA,
+    STK_UPDATE,
+    STK_KEYBOARD,
+    STK_DISPLAY,
+    STK_POWERMGMT,
+    STK_RESET,
+    STK_BELL,
+    STK_DATETIME,
+    STK_PENDRIVE,
+    STK_DWNRECORD,
+    STK_DWNUSER,
+    STK_UPLUSER,
+    STK_UPLPICTURE,
+    STK_DWNEMS,
+    STK_UPLEMS,
+    STK_UPLTHEME,
+    STK_AUTOTEST,
+    STK_RECORD,
+    STK_SYSINFO,
+    STK_TIMEZONE,
+    STK_HOLIDAY,
+    STK_GROUP,
+    STK_UNLOCKGROUP,
+    STK_ACCESS,
+    STK_DURESS = 39,
 
-	STK_FUN,	//40
-	STK_VERIFY,
-	STK_GMATCH,
-	STK_GROUP1,
-	STK_GROUP2,
-	STK_GROUP3,
-	STK_GROUP4,
-	STK_GROUP5,
-
+    STK_FUN, //40
+    STK_VERIFY,
+    STK_GMATCH,
+    STK_GROUP1,
+    STK_GROUP2,
+    STK_GROUP3,
+    STK_GROUP4,
+    STK_GROUP5,
 };
+
 //==========================================================
 
 #define TTS_OPTION
 
-typedef struct __OPTIONS__{
-	int Language;					//Language of display messages
-	BYTE MAC[6];					//Ethrenet MAC
-	BYTE CardKey[6];
-	BYTE IPAddress[4];				//Network IP Address
-	int DeviceID;					//Device ID for 485 connection
-	int MThreshold, EThreshold, VThreshold;		//Fingerprint Matching threshold, Fingerprint Enroll threshold
-	unsigned int LastAttLog;			//Last AttLog index
-	int UDPPort;					//UDP Port Number for communication
-	int OImageWidth, OImageHeight, OTopLine, OLeftLine;  //Original fingerprint size and corner for capturing
-	int CPX[4],CPY[4];				//correct distorted image parameters
-	int ZF_WIDTH,ZF_HEIGHT;
-	int MSpeed;					//fingerprint match speed 0-low, 1-high, 2-auto
-	int AttState;
-	int MaxUserCount;				//unit is 100
-	int MaxAttLogCount;				//unit is 10000
-	int MaxFingerCount;				//unit is 100
-	int AlarmAttLog;
-	int AlarmOpLog;
-	int AlarmReRec;					//Recheck time
-	int RS232BaudRate;				//0x23
-	int RS232CRC;
-	int RS232Stop;
-	int WEBPort;
-	int ShowState;
-	int KeyLayout;
-	int VoiceOn;
-	int AutoPowerOff; 				//自动关机时间
-	int AutoPowerOn;				//自动开机时间
-	int AutoPowerSuspend;				//自动待机时间
-	int AutoAlarm[MAX_AUTOALARM_CNT];		//自动响铃时间
-	int IdlePower;					//空闲自动待机-1，自动关机-0
-	int IdleMinute;					//空闲时间
-	int ShowScore;					//show the verification score for fingerprint matching.
-	int NetworkOn, RS232On, RS485On;		//是否用以太网络、RS232、RS485功能
-	int NetworkFunOn, LockFunOn, RFCardFunOn; 	//是否打开网络/门禁（0-无，1-简单门禁，2-高级门禁）/射频卡功能
-	int One2OneFunOn, PowerMngFunOn;	 	//是否打开1:1功能,电源管理功能
-	int NewFPReader;
-	int ShowName;
-	int UnlockPerson;				//同时开锁的人数
-	int ShowCheckIn;				//是否显示上下班状态
-	int OnlyPINCard;				//仅验证号码卡
-	int IsTestMachine;				//是否测试用机器
-	int MustChoiceInOut;				//是否必须选择进出状态
-	//能够自动测试	int CMOSSensorDevAddr;		//CMOS Sensor Chip IIC Device Address: 0x42-OV7620, 0x22-Hy7131
-	int HiSpeedNet;					//100M Ethernet
-	int MenuStyle;					//菜单风格
-	int CanChangeCardKey;				//是否允许改变卡密码
-	int Must1To1;					//是否只允许一对一比对
-	int LCDModify;
-	int ComKey;					//连接密码
-	int MustEnroll;					//必须是注册用户,比对后才能有效。用于别的机器上登记的指纹卡可以不在本机上注册即可使用
-	int TimeOutMenu;				//菜单的超时时间
-	int TimeOutPin;					//输考勤号码的超时时间
-	int TimeOutState;				//考勤状态的超时时间
-	int SaveAttLog;					//是否保存验证记录
-	int RS232Fun;					//RS232接口功能：0-无；1-完整API通讯；2-简单ID输出
-	int IsModule;					//是否模块
-	int ShowSecond;					//是否显示秒
-	int RFCardSecStart;				//Mifare Card 起始存放指纹数据的扇区
-	int RFCardSecLen;				//Mifare Card 存放指纹数据的扇区数
-	int RFCardFPC;					//Mifare Card 存放指纹的个数
-	int PIN2Width;					//PIN2码的字符宽度 <=5表示不支持PIN2码  2147483647=0x7FFFFFF
-	int DateFormat;					//Date Format
-	int OPLogMask1;					//
-	int OPLogMask2;					//
-	int AutoState[4*4];				//自动状态转换的时间
-	int DelayCount, IncThr, TopThr, MinThr;		//指纹检测的阀值参数
-	int MaxNoiseThr, MinMinutiae, MaxTempLen;	//最大容许指纹图像噪音阀值,
-	int SaveBitmap;					//Save bmp format finger image or not
-	BYTE GATEIPAddress[4];				//Gateway IP Address
-	int TCPPort;					//TCP port for communication
-	int RISServerTCPPort;					// net TCP port
-	BYTE NetMask[4];				//Network mask address
-	BYTE AuthServerIP[4];				//Identification Server
-	int AuthServerEnabled;				//Identification Server enabled 0-only local 1-network->local 2-only network 3-local->network
-	int IsOnlyRFMachine;				//Only RF machine not fingerprint
-	int IsOnlyOneSensor;				//Only One Sensor
-	int OS;						//Current OS 0=NONE 1=LINUX
-	int IsWiegandKeyPad;				//use wiegand keypad or not
-	int AutoStateFunOn;				//自动状态转换功能
-	int EnrollCount;  	                     	//register finger count
-	int IsSupportSMS;				//SMS Enable or Disable
-	int IsSupportUSBDisk;				//Support USB DISK
-	int AdminCnt;                               	//同时验证管理员的个数
-	int AutoAlarmDelay;				//Auto Alarm delay time(second)
-	int MultiLanguage;				//support select language
-	int LockPowerButton;				//Lock Power Button
-	int ModemEnable;
-	int IsSupportModem;				//support modem connection
-	int ModemModule;					// 1 - Q24PL  2 - EM560  3 - EM660  4 - EM770/W
-	int IsSupportAuthServer;			//support AuthServer
-	int AuthServerTimeOut;				//TimeOut for AuthServer
-	int IsSupportMF;				//support mifare
-	int AutoAlarmTimes;				//Auto Alarm Times
-	int IsACWiegand;				//whether output access control wiegand 26bit
-	int DNSCheckInterval;				//Refresh AuthServer List interval times unit:minute
-	int AutoUploadAttlog;				//Automate upload Attlog seconds
-	int DisableNormalUser;				//Disable normal user
-	int KeyPadBeep;					//press key to play beep voice.
-	int WorkCode;					//support work code
-	int MaxUserFingerCount;				//default=10
-	int AttLogExtendFormat;				//Extend attendance logs storage format
-	int CompressAttlog;				//whether compress attendance logs or not(only valid for old AttLog format)
-	int ASDewarpedImage;				//whether dewarp the image for auth server
-	int ProcessImage;				//processing image with light check
-	int IsFlashLed;					//whether flash green led or not
-	int DisableRootPassword;			//disabled Setup root password by CommKey
-	int IsSupportMP3;				//support MP3
-	int MifareAsIDCard;				//Mifare Card as ID Card
-	int PlayGroupVoice;				//when verified play voice by its group
-	int PlayTZVoice;				//when verified play voice by time zone
-	BYTE WebServerIP[4];				//Network IP Address
-	int WebServerPort;				//Network Port
-	int AudioVol;					//Audio volumn
-	int AutoAlarmAudioVol;				//Auto alarm audio volume
-	int DHCP;					//DHCP enable or disable
-	int AutoSyncTimeFunOn;				//Synchronize time from remote time server
-	int AutoSyncTime;				//Schedule time for synchronize
-	BYTE TimeServerIP[4];				//Time Server IP Address
-	int CameraFunOn;				//take a photo from camera
-	int StartUpNotify;                              //起动广播，BIT0-BT232, BIT1-NETWORK
-	int AdvanceMatch;				//support 1:G 1:H
-	int I1ToNFrom;                                  //1：N From (minimum user PIN for identification)
-	int I1ToNTo;                                    //1：N To (maximum user PIN for identification)
-	int I1ToH;                                    	//1：H
-	int I1ToG; 					//1：G
-	int TwoLineLCM;					//TWO LINE SMALL LCM
-	int ErrTimes;					//Error times for pressing finger
-	int UserExtendFormat;				//extend user data information
-	U32 CMOSGC; 					//0-AUTO; 1-255 for RGB
-	int RefreshUserData;				//Auto refresh user data from authserver
-	int DisableAdminUser;				//Disable administrator verification
-	int IClockFunOn;				//iClock functions
-	BYTE ProxyServerIP[4];				//Proxy server ip address
-	int ProxyServerPort;				//Proxy server port
-	int IsSupportC2;				//support C2 controller or not
-	int EnableProxyServer;				//Enable ProxyServer
-	int WorkCodeFunOn;
-	int MustChoiceWorkCode;				//验证时是否必须选择WorkCode(liming)
-	int ViewAttlogFunOn;                            //View attlog funtion
-	int IsInit;
-	int Saved;
-	int SSRFunOn;					//whether have ssr funtion
-	int HzImeOn;					//t9 hz ime
-	int PinPreAdd0;					//号码位数不足是否显示0
-	int SetGatewayWaitCount;                        //Wait seconds to retry setup gateway
-	int IsSupportHID;                               //support iClass
-	int FPRetry;					//1:1指纹验证重试次数
-	int AdmRetry;					//管理员验证重试次数
-	int PwdRetry;					//密码验证重试次数
-	int InterStyle;					//界面风格
-	int LogoTime;					//图片循环间隔
-	int ClockTime;					//时钟显示延时
-	int SMSTime;
-	//liming
-	int ShortKeyCount;				//快捷键数量
-	int AlarmMaxCount;
-	int AlarmPlayTimes;
-	int AutoAlarmFunOn;				//Auto alarm function enabled or disable
-	int SMSCount;
-	int TFTKeyLayout;				//0:iclock200/300,1:hit-1-2,2:iclock400/500
-	int MustCheckWorkCode;				//输入的WORKCODE是否必须在表中
-	int USB232On;					//
-	int USB232FunOn;				//
-	int IMEFunOn;					//1:开启输入法，0:关闭输入法
-	int Brightness;					//屏幕亮度
-	int LcdMode;					//显示屏模式 1:支持背光调节(iF4),0:不支持背光调节
-	int OpenDoorDelay;                              //门磁延时
-	int DuressHelpKeyOn;                            //“~K”键求助 是/否
-	int Duress1To1;                                 //1：1方式报警 是/否
-	int Duress1ToN;                                 //1：N方式报警 是/否
-	int DuressPwd;                                  //Password方式产生报警
-	int DuressAlarmDelay;                           //自动报警时间 0～255秒
-	int DoorSensorMode;                             //door sensor 门磁开关方式 0-NO 1-NC 其他表示不检测门磁
-	int LockOn;                                     //设置锁控时长
-	int DoorSensorTimeout;                          //门磁报警延时Alarm signal will be raise when door sensor open
-	int DoorCloseTimeZone;				//常闭时间段
-	int DoorOpenTimeZone;				//常开时间段
-	int IsHolidayValid;				//节假日是否有效
-	int ExtWGInFunOn;
-	int WiegandID;
-	int iCLASSAsIDCard;				//ICLASS卡作为普通ID卡
-	int IsSupportiCLSRW;				//是否支持iclass卡
-	int iCLASSCardType;				//iclass卡类型
-	int AntiPassbackFunOn;                          //0支持反潜,1不支持反潜
-	int AntiPassbackOn;                             //0 不反潜;1、出反潜，必须有入才能出；2、入反潜，必须有出才能入；
-	int MasterState; //主从机通讯中主机的状态,若主机为0,则从机为1,若主机为1则从机为0,若为-1则主从都为主机当前的状态gOptions.AttState。
-	int IsSupportWIFI;      //ccc
-	int wifidhcpfunon;      //ccc
-	int PrinterFunOn;                       //是否有打印机功能
-	int PrinterOn;                          //打印机功能：0：无；1：输出到串口；2：ESC、Star打印
-	int AuthServerREQ;      		//检查服务器是否联机时间间隔
-	//        int ModemKeepLive;      		//是否保持连线状态 0=挂断 1=保持
-	//	int GPRSFrequency;			//GPRS频率
-	int AuthServerCheckMode;        	//服务器检查类型,0:TCP/UDP通信校验，1:GSM通信传输校验，2:pushsdk通信方式
-	int AuthServerIPType;			//服务器地址类型
-	int RedialTimeInterval; 		//重拨时间间隔
-	int RedialCount;                	//重拨次数
-	//        int isgprstest;
-	int ReconnectInterval;
-	int ShowPhoto;				//是否显示用户照片
-	int IsSupportPhoto;			//支持照片显示功能
-	int WiegandOutType;			//Wiegand输出类型：0=PIN；1=CardNumber
-	int WiegandInType;			//Wiegand输入类型：0=PIN; 1=CardNumber
-	int isSupportAlarmExt;			//是否开启外部闹铃
-	int CameraOpen;				//是否支持Camera
-	int CameraBright;                         //摄像头亮度
-	int CameraContrast;                       //摄像头对比度
-	int PicQuality;                           //摄像头抓图质量
-	int CameraScene;                         //摄像头环境设置（室内，室外)
-	int CapturePic;                         //抓拍图像
-	int CapturevfTimes;                     //抓拍验证不通过次数
-	int CaptureAlarm;               	//拍照空间警告
-	BYTE pingtestip[4];
-	int IMESwitchKey;			//输入法开关键
-	int SwitchAttStateByTimeZone;		//
-	int NotShowRecordInfo;			//不显示记录信息
-	int DaylightSavingTimeFun;                       //是否显示支持夏令时制,
-	int DaylightSavingTimeOn;                      //是否支持夏令时制
-	int CurTimeMode;			//1当前为夏令时，2当前不是夏令时
-	int DaylightSavingTime;			//进入夏令时的时间
-	int StandardTime;			//进入非夏令时的时间
-	int FpSelect;				//是否显示指纹图像
-	int AlwaysShowState;			//永远显示状态图
-	int AttUseTZ;				//考勤用时间段限制打卡
-	int MachineGroup;			//机器组(IDT Limited定制)
-	int HasFPThreshold;
-	int NoFPThreshold;
-	int UseNewBell;				//是否使用新闹铃模式
-	int HavePowerKey;			//是否有电源键
-	int LockPowerKey;			//是否锁定关机键
-	int LimitFpCount;			//系统指纹最大数,当指纹数量超出此数时只能1:1比对(<MaxFingerCount)
-	int ExAlarmDelay;			//外部响铃持续时间(秒)
-	int DelRecord;				//Del Record Count if full
-	int ApiPort;				//HTTP_SDK DataApi Service Port
-	int RSize;
-	int ShowStyle;	//add by jazzy 2008.07.28 for arabic right to left show
-	//zsliu add
-	int isUseHejiraCalendar;//user Hejira Calendar's flag 判断是否使用伊朗日历
-	int IR_SensorOn;                        // 是否支持IR Sensor
-	int IRSS_BLSwitch;			//背光开关
-	int IRSS_BLOffR;                                //背光暗值
-	int IRSS_BLOnR;                                 //背光亮值
-	int IRSS_BLDlyT;                                //背光延时时间（自动背光打开时）
-	int IRSS_AutoCon;                               //自动控制 [7:5] 检测间隔 [4:3] 检测次数 [2] 自动采样[1] 自动控制背光 [0] 上电状态
-	int IRSS_Range;                                 // 判断幅度（自动控制采样）
-	int BatteryInfo;	//add cn 2009-03-04
-	/*
-	 * ScreenAddress=2 表示确定不需要翻转。
-	 * ScreenAddress=0或者1表示翻转的情况，如果出现倒屏，则需要赋值为1或者0进行翻转，
-	 * 如果翻转不成功的话，则更换参数0和1进行操作处理。
-	 * 注意：翻转后，需要重新启动机器两次后方可生效。
-	 */
-	int ScreenAddress;	// add cn 2009-03-04
-	int isRotateCamera;   	//add by cn
-	int IsSupportExtBell;     //add by lyy
-	int DetectFpAlg;
-	int ZKFPVersion;
-	int FingerSensitivity;	//0,1,2->low,middle,high
-	int FPRotation;
+typedef struct __OPTIONS__ {
+    int Language; //Language of display messages
+    BYTE MAC[6]; //Ethrenet MAC
+    BYTE CardKey[6];
+    BYTE IPAddress[4]; //Network IP Address
+    int DeviceID; //Device ID for 485 connection
+    int MThreshold, EThreshold, VThreshold; //Fingerprint Matching threshold, Fingerprint Enroll threshold
+    unsigned int LastAttLog; //Last AttLog index
+    int UDPPort; //UDP Port Number for communication
+    int OImageWidth, OImageHeight, OTopLine, OLeftLine; //Original fingerprint size and corner for capturing
+    int CPX[4], CPY[4]; //correct distorted image parameters
+    int ZF_WIDTH, ZF_HEIGHT;
+    int MSpeed; //fingerprint match speed 0-low, 1-high, 2-auto
+    int AttState;
+    int MaxUserCount; //unit is 100
+    int MaxAttLogCount; //unit is 10000
+    int MaxFingerCount; //unit is 100
+    int AlarmAttLog;
+    int AlarmOpLog;
+    int AlarmReRec; //Recheck time
+    int RS232BaudRate; //0x23
+    int RS232CRC;
+    int RS232Stop;
+    int WEBPort;
+    int ShowState;
+    int KeyLayout;
+    int VoiceOn;
+    int AutoPowerOff; //自动关机时间
+    int AutoPowerOn; //自动开机时间
+    int AutoPowerSuspend; //自动待机时间
+    int AutoAlarm[MAX_AUTOALARM_CNT]; //自动响铃时间
+    int IdlePower; //空闲自动待机-1，自动关机-0
+    int IdleMinute; //空闲时间
+    int ShowScore; //show the verification score for fingerprint matching.
+    int NetworkOn, RS232On, RS485On; //是否用以太网络、RS232、RS485功能
+    int NetworkFunOn, LockFunOn, RFCardFunOn; //是否打开网络/门禁（0-无，1-简单门禁，2-高级门禁）/射频卡功能
+    int One2OneFunOn, PowerMngFunOn; //是否打开1:1功能,电源管理功能
+    int NewFPReader;
+    int ShowName;
+    int UnlockPerson; //同时开锁的人数
+    int ShowCheckIn; //是否显示上下班状态
+    int OnlyPINCard; //仅验证号码卡
+    int IsTestMachine; //是否测试用机器
+    int MustChoiceInOut; //是否必须选择进出状态
+    //能够自动测试	int CMOSSensorDevAddr;		//CMOS Sensor Chip IIC Device Address: 0x42-OV7620, 0x22-Hy7131
+    int HiSpeedNet; //100M Ethernet
+    int MenuStyle; //菜单风格
+    int CanChangeCardKey; //是否允许改变卡密码
+    int Must1To1; //是否只允许一对一比对
+    int LCDModify;
+    int ComKey; //连接密码
+    int MustEnroll; //必须是注册用户,比对后才能有效。用于别的机器上登记的指纹卡可以不在本机上注册即可使用
+    int TimeOutMenu; //菜单的超时时间
+    int TimeOutPin; //输考勤号码的超时时间
+    int TimeOutState; //考勤状态的超时时间
+    int SaveAttLog; //是否保存验证记录
+    int RS232Fun; //RS232接口功能：0-无；1-完整API通讯；2-简单ID输出
+    int IsModule; //是否模块
+    int ShowSecond; //是否显示秒
+    int RFCardSecStart; //Mifare Card 起始存放指纹数据的扇区
+    int RFCardSecLen; //Mifare Card 存放指纹数据的扇区数
+    int RFCardFPC; //Mifare Card 存放指纹的个数
+    int PIN2Width; //PIN2码的字符宽度 <=5表示不支持PIN2码  2147483647=0x7FFFFFF
+    int DateFormat; //Date Format
+    int OPLogMask1; //
+    int OPLogMask2; //
+    int AutoState[4 * 4]; //自动状态转换的时间
+    int DelayCount, IncThr, TopThr, MinThr; //指纹检测的阀值参数
+    int MaxNoiseThr, MinMinutiae, MaxTempLen; //最大容许指纹图像噪音阀值,
+    int SaveBitmap; //Save bmp format finger image or not
+    BYTE GATEIPAddress[4]; //Gateway IP Address
+    int TCPPort; //TCP port for communication
+    int RISServerTCPPort; // net TCP port
+    BYTE NetMask[4]; //Network mask address
+    BYTE AuthServerIP[4]; //Identification Server
+    int AuthServerEnabled; //Identification Server enabled 0-only local 1-network->local 2-only network 3-local->network
+    int IsOnlyRFMachine; //Only RF machine not fingerprint
+    int IsOnlyOneSensor; //Only One Sensor
+    int OS; //Current OS 0=NONE 1=LINUX
+    int IsWiegandKeyPad; //use wiegand keypad or not
+    int AutoStateFunOn; //自动状态转换功能
+    int EnrollCount; //register finger count
+    int IsSupportSMS; //SMS Enable or Disable
+    int IsSupportUSBDisk; //Support USB DISK
+    int AdminCnt; //同时验证管理员的个数
+    int AutoAlarmDelay; //Auto Alarm delay time(second)
+    int MultiLanguage; //support select language
+    int LockPowerButton; //Lock Power Button
+    int ModemEnable;
+    int IsSupportModem; //support modem connection
+    int ModemModule; // 1 - Q24PL  2 - EM560  3 - EM660  4 - EM770/W
+    int IsSupportAuthServer; //support AuthServer
+    int AuthServerTimeOut; //TimeOut for AuthServer
+    int IsSupportMF; //support mifare
+    int AutoAlarmTimes; //Auto Alarm Times
+    int IsACWiegand; //whether output access control wiegand 26bit
+    int DNSCheckInterval; //Refresh AuthServer List interval times unit:minute
+    int AutoUploadAttlog; //Automate upload Attlog seconds
+    int DisableNormalUser; //Disable normal user
+    int KeyPadBeep; //press key to play beep voice.
+    int WorkCode; //support work code
+    int MaxUserFingerCount; //default=10
+    int AttLogExtendFormat; //Extend attendance logs storage format
+    int CompressAttlog; //whether compress attendance logs or not(only valid for old AttLog format)
+    int ASDewarpedImage; //whether dewarp the image for auth server
+    int ProcessImage; //processing image with light check
+    int IsFlashLed; //whether flash green led or not
+    int DisableRootPassword; //disabled Setup root password by CommKey
+    int IsSupportMP3; //support MP3
+    int MifareAsIDCard; //Mifare Card as ID Card
+    int PlayGroupVoice; //when verified play voice by its group
+    int PlayTZVoice; //when verified play voice by time zone
+    BYTE WebServerIP[4]; //Network IP Address
+    int WebServerPort; //Network Port
+    int AudioVol; //Audio volumn
+    int AutoAlarmAudioVol; //Auto alarm audio volume
+    int DHCP; //DHCP enable or disable
+    int AutoSyncTimeFunOn; //Synchronize time from remote time server
+    int AutoSyncTime; //Schedule time for synchronize
+    BYTE TimeServerIP[4]; //Time Server IP Address
+    int CameraFunOn; //take a photo from camera
+    int StartUpNotify; //起动广播，BIT0-BT232, BIT1-NETWORK
+    int AdvanceMatch; //support 1:G 1:H
+    int I1ToNFrom; //1：N From (minimum user PIN for identification)
+    int I1ToNTo; //1：N To (maximum user PIN for identification)
+    int I1ToH; //1：H
+    int I1ToG; //1：G
+    int TwoLineLCM; //TWO LINE SMALL LCM
+    int ErrTimes; //Error times for pressing finger
+    int UserExtendFormat; //extend user data information
+    U32 CMOSGC; //0-AUTO; 1-255 for RGB
+    int RefreshUserData; //Auto refresh user data from authserver
+    int DisableAdminUser; //Disable administrator verification
+    int IClockFunOn; //iClock functions
+    BYTE ProxyServerIP[4]; //Proxy server ip address
+    int ProxyServerPort; //Proxy server port
+    int IsSupportC2; //support C2 controller or not
+    int EnableProxyServer; //Enable ProxyServer
+    int WorkCodeFunOn;
+    int MustChoiceWorkCode; //验证时是否必须选择WorkCode(liming)
+    int ViewAttlogFunOn; //View attlog funtion
+    int IsInit;
+    int Saved;
+    int SSRFunOn; //whether have ssr funtion
+    int HzImeOn; //t9 hz ime
+    int PinPreAdd0; //号码位数不足是否显示0
+    int SetGatewayWaitCount; //Wait seconds to retry setup gateway
+    int IsSupportHID; //support iClass
+    int FPRetry; //1:1指纹验证重试次数
+    int AdmRetry; //管理员验证重试次数
+    int PwdRetry; //密码验证重试次数
+    int InterStyle; //界面风格
+    int LogoTime; //图片循环间隔
+    int ClockTime; //时钟显示延时
+    int SMSTime;
+    //liming
+    int ShortKeyCount; //快捷键数量
+    int AlarmMaxCount;
+    int AlarmPlayTimes;
+    int AutoAlarmFunOn; //Auto alarm function enabled or disable
+    int SMSCount;
+    int TFTKeyLayout; //0:iclock200/300,1:hit-1-2,2:iclock400/500
+    int MustCheckWorkCode; //输入的WORKCODE是否必须在表中
+    int USB232On; //
+    int USB232FunOn; //
+    int IMEFunOn; //1:开启输入法，0:关闭输入法
+    int Brightness; //屏幕亮度
+    int LcdMode; //显示屏模式 1:支持背光调节(iF4),0:不支持背光调节
+    int OpenDoorDelay; //门磁延时
+    int DuressHelpKeyOn; //“~K”键求助 是/否
+    int Duress1To1; //1：1方式报警 是/否
+    int Duress1ToN; //1：N方式报警 是/否
+    int DuressPwd; //Password方式产生报警
+    int DuressAlarmDelay; //自动报警时间 0～255秒
+    int DoorSensorMode; //door sensor 门磁开关方式 0-NO 1-NC 其他表示不检测门磁
+    int LockOn; //设置锁控时长
+    int DoorSensorTimeout; //门磁报警延时Alarm signal will be raise when door sensor open
+    int DoorCloseTimeZone; //常闭时间段
+    int DoorOpenTimeZone; //常开时间段
+    int IsHolidayValid; //节假日是否有效
+    int ExtWGInFunOn;
+    int WiegandID;
+    int iCLASSAsIDCard; //ICLASS卡作为普通ID卡
+    int IsSupportiCLSRW; //是否支持iclass卡
+    int iCLASSCardType; //iclass卡类型
+    int AntiPassbackFunOn; //0支持反潜,1不支持反潜
+    int AntiPassbackOn; //0 不反潜;1、出反潜，必须有入才能出；2、入反潜，必须有出才能入；
+    int MasterState; //主从机通讯中主机的状态,若主机为0,则从机为1,若主机为1则从机为0,若为-1则主从都为主机当前的状态gOptions.AttState。
+    int IsSupportWIFI; //ccc
+    int wifidhcpfunon; //ccc
+    int PrinterFunOn; //是否有打印机功能
+    int PrinterOn; //打印机功能：0：无；1：输出到串口；2：ESC、Star打印
+    int AuthServerREQ; //检查服务器是否联机时间间隔
+    //        int ModemKeepLive;      		//是否保持连线状态 0=挂断 1=保持
+    //	int GPRSFrequency;			//GPRS频率
+    int AuthServerCheckMode; //服务器检查类型,0:TCP/UDP通信校验，1:GSM通信传输校验，2:pushsdk通信方式
+    int AuthServerIPType; //服务器地址类型
+    int RedialTimeInterval; //重拨时间间隔
+    int RedialCount; //重拨次数
+    //        int isgprstest;
+    int ReconnectInterval;
+    int ShowPhoto; //是否显示用户照片
+    int IsSupportPhoto; //支持照片显示功能
+    int WiegandOutType; //Wiegand输出类型：0=PIN；1=CardNumber
+    int WiegandInType; //Wiegand输入类型：0=PIN; 1=CardNumber
+    int isSupportAlarmExt; //是否开启外部闹铃
+    int CameraOpen; //是否支持Camera
+    int CameraBright; //摄像头亮度
+    int CameraContrast; //摄像头对比度
+    int PicQuality; //摄像头抓图质量
+    int CameraScene; //摄像头环境设置（室内，室外)
+    int CapturePic; //抓拍图像
+    int CapturevfTimes; //抓拍验证不通过次数
+    int CaptureAlarm; //拍照空间警告
+    BYTE pingtestip[4];
+    int IMESwitchKey; //输入法开关键
+    int SwitchAttStateByTimeZone; //
+    int NotShowRecordInfo; //不显示记录信息
+    int DaylightSavingTimeFun; //是否显示支持夏令时制,
+    int DaylightSavingTimeOn; //是否支持夏令时制
+    int CurTimeMode; //1当前为夏令时，2当前不是夏令时
+    int DaylightSavingTime; //进入夏令时的时间
+    int StandardTime; //进入非夏令时的时间
+    int FpSelect; //是否显示指纹图像
+    int AlwaysShowState; //永远显示状态图
+    int AttUseTZ; //考勤用时间段限制打卡
+    int MachineGroup; //机器组(IDT Limited定制)
+    int HasFPThreshold;
+    int NoFPThreshold;
+    int UseNewBell; //是否使用新闹铃模式
+    int HavePowerKey; //是否有电源键
+    int LockPowerKey; //是否锁定关机键
+    int LimitFpCount; //系统指纹最大数,当指纹数量超出此数时只能1:1比对(<MaxFingerCount)
+    int ExAlarmDelay; //外部响铃持续时间(秒)
+    int DelRecord; //Del Record Count if full
+    int ApiPort; //HTTP_SDK DataApi Service Port
+    int RSize;
+    int ShowStyle; //add by jazzy 2008.07.28 for arabic right to left show
+    //zsliu add
+    int isUseHejiraCalendar; //user Hejira Calendar's flag 判断是否使用伊朗日历
+    int IR_SensorOn; // 是否支持IR Sensor
+    int IRSS_BLSwitch; //背光开关
+    int IRSS_BLOffR; //背光暗值
+    int IRSS_BLOnR; //背光亮值
+    int IRSS_BLDlyT; //背光延时时间（自动背光打开时）
+    int IRSS_AutoCon; //自动控制 [7:5] 检测间隔 [4:3] 检测次数 [2] 自动采样[1] 自动控制背光 [0] 上电状态
+    int IRSS_Range; // 判断幅度（自动控制采样）
+    int BatteryInfo; //add cn 2009-03-04
+    /*
+     * ScreenAddress=2 表示确定不需要翻转。
+     * ScreenAddress=0或者1表示翻转的情况，如果出现倒屏，则需要赋值为1或者0进行翻转，
+     * 如果翻转不成功的话，则更换参数0和1进行操作处理。
+     * 注意：翻转后，需要重新启动机器两次后方可生效。
+     */
+    int ScreenAddress; // add cn 2009-03-04
+    int isRotateCamera; //add by cn
+    int IsSupportExtBell; //add by lyy
+    int DetectFpAlg;
+    int ZKFPVersion;
+    int FingerSensitivity; //0,1,2->low,middle,high
+    int FPRotation;
 
-	//欧版考勤机的参数。判断是否是欧版考勤机
-	int EuropeDevice;//add by mjh
-	int RotateDev;//for iclcok990 camera
-
-
-	//zsliu add for 3寸和3.5寸屏的合并工作
-	/*
-	 * ～MulAlgVer=0	//仅支持单一指纹算法
-	 * ～MulAlgVer=1	//支持多种指纹算法，目前支持9.0和10.0算法自由切换
-	 * 如果仅仅需要支持9.0的固件，配置如下：ZKFPVersion=9，并且～MulAlgVer=0
-	 * 如果仅仅需要支持10.0的固件，配置如下：ZKFPVersion=10，并且～MulAlgVer=0
-	 * 如果需要支持10.0/9.0之间可以切换的固件，则配置如下：～MulAlgVer=1
-	 */
-	int MulAlgVer;
-	int FP10DBVersion;
-	/*
-	 * supportLCDType=0  //支持3寸彩屏固件
-	 * supportLCDType=1  //支持3.5寸彩屏固件
-	 * supportLCDType=2  //等方便扩展处理
-	 */
-	int supportLCDType;
-	//菜单界面的偏移量,不需要保存，全局临时变量
-	int MenuOffset;
-	//控制界面的偏移量,不需要保存，全局临时变量
-	int ControlOffset;
-	//屏幕宽度,不需要保存，全局临时变量
-	int LCDWidth;
-	//屏幕高度,不需要保存，全局临时变量
-	int LCDHeight;
-	//这个是在主界面显示的偏移量,不需要保存，全局临时变量
-	int MainVerifyOffset;
-	//主要针对指纹在模板框中显示的Y位置的偏移量，默认是10
-	int sensorOffsetY;
-	//列表框的间距
-	int GridWidth;
-	//键盘类型
-	int keyboardStyle;
-
-	// GPRS  的一些参数
-	int EchoFailRestart;
-	int EchoInterval;
-	int EchoAction;
-	int EchoType;
-	int WGPassThrough;
-
-	//ADMS
-	int IclockSvrFun;       	//charge open ADMS or not; 1 is open, 0 is close.
-	int iClockServerStatus;
-	int iClockErrorStatus;
+    //欧版考勤机的参数。判断是否是欧版考勤机
+    int EuropeDevice; //add by mjh
+    int RotateDev; //for iclcok990 camera
 
 
-	//写屏显示的delay时长，以秒为单位
-	int WriteLCDDelay;              //add by zhc 2008.11.25 
+    //zsliu add for 3寸和3.5寸屏的合并工作
+    /*
+     * ～MulAlgVer=0	//仅支持单一指纹算法
+     * ～MulAlgVer=1	//支持多种指纹算法，目前支持9.0和10.0算法自由切换
+     * 如果仅仅需要支持9.0的固件，配置如下：ZKFPVersion=9，并且～MulAlgVer=0
+     * 如果仅仅需要支持10.0的固件，配置如下：ZKFPVersion=10，并且～MulAlgVer=0
+     * 如果需要支持10.0/9.0之间可以切换的固件，则配置如下：～MulAlgVer=1
+     */
+    int MulAlgVer;
+    int FP10DBVersion;
+    /*
+     * supportLCDType=0  //支持3寸彩屏固件
+     * supportLCDType=1  //支持3.5寸彩屏固件
+     * supportLCDType=2  //等方便扩展处理
+     */
+    int supportLCDType;
+    //菜单界面的偏移量,不需要保存，全局临时变量
+    int MenuOffset;
+    //控制界面的偏移量,不需要保存，全局临时变量
+    int ControlOffset;
+    //屏幕宽度,不需要保存，全局临时变量
+    int LCDWidth;
+    //屏幕高度,不需要保存，全局临时变量
+    int LCDHeight;
+    //这个是在主界面显示的偏移量,不需要保存，全局临时变量
+    int MainVerifyOffset;
+    //主要针对指纹在模板框中显示的Y位置的偏移量，默认是10
+    int sensorOffsetY;
+    //列表框的间距
+    int GridWidth;
+    //键盘类型
+    int keyboardStyle;
 
-	int ttsIntegralPointOpen;	//TTS integral point give the correct time
+    // GPRS  的一些参数
+    int EchoFailRestart;
+    int EchoInterval;
+    int EchoAction;
+    int EchoType;
+    int WGPassThrough;
 
-	//拍照机器，能保存考勤照片的最大值
-	int maxCaptureCount;		//max capture picture, default 8000
+    //ADMS
+    int IclockSvrFun; //charge open ADMS or not; 1 is open, 0 is close.
+    int iClockServerStatus;
+    int iClockErrorStatus;
 
-	TTS_OPTION int TTS_S;
-	TTS_OPTION int TTS_VERIFY;
-	TTS_OPTION int TTS_SMS;
-	TTS_OPTION int TTS_LOGO;
-	TTS_OPTION int TTS_ENROLL;
-	TTS_OPTION int TTS_REC;
-	TTS_OPTION int TTS_KEY;
-	TTS_OPTION int TTS_STATE;
-	TTS_OPTION int TTS_TIME;
-	TTS_OPTION int TTS_MENU;
 
-	int FreeTime;		//free time
-	//这个参数用于连接断开的时候，是否需要关闭beep声
-	int EnableCommEndBeep;	//enable commu end beep
-	//这是视频显示是否旋转的参数，主要是为了在登记用户的时候，
-	//不支持此功能，需要屏蔽掉,但是其它设置界面需要此功能，默认为1；
-	int enableVideoRotate;
-	/*
-	 * 键盘类型配置主要针对彩屏中比较特殊的键盘而设置的，在固件中做键盘映射功能：
-	 * KeyType=1 代表B3键盘类型的机器，这些是定制
-	 * KeyType=2 代表ICS01键盘类型的机器，这些是定制
-	 * 
-	 * 
-	 */
-	int KeyType;
+    //写屏显示的delay时长，以秒为单位
+    int WriteLCDDelay; //add by zhc 2008.11.25
 
-	//add by caona for face
-	int FaceFunOn;
-	int DefFaceGroup;
-	int FaceVThreshold;
-	int FaceMThreshold;
-	int MaxFaceCount;
-	int FaceRegMode;
-	int FaceExposoure;
-	int FaceExposRang;
-	int VideoGain;
-	int VideQuality;
-	//int UploadPhoto;	//seiya dlphoto end
-	int IsUploadPhotoOnly;  //when open ADMS, if 1, All functions of ADMS except upload photo can be used; if 0, all can be used.
-	BYTE DNS[4];				//DNS
-	int IsSupportDNS;
-	int RS232FunOn;
-	int RS485FunOn;
-	BYTE IclockSvrURL[128];
-	int WebServerURLModel;
-	int IsSupportFlowCtrl;
-	BYTE OptionsPassword[64];
-	int IsRotatePhoto;
-	/*异地考勤,add by yangxiaolong,2011-06-14,start*/
-	int RemoteAttFunOn;		//异地考勤开关，1:open，0:close.默认为开
-	int RmUserSaveTime;		//异地考勤用户保存时间，以天为单位。默认为5天
-	/*异地考勤,add by yangxiaolong,2011-06-14,end*/
-	int USBCheckTime; //add by lihm	 几秒进行一次U盘检测
-	int USBFileCount; //add by lihm 针对ZEM510 /proc/bus/usb/001 在没有插U盘时有几个目录
-	int USBCheckOn; //add by lihm  U盘检测功能开关
-	/*增加pushsdk对高级门禁的支持，add by yangxiaolong,2011-9-26,start*/
-	int PushLockFunOn;	// 1,支持；0不支持
-	/*增加pushsdk对高级门禁的支持，add by yangxiaolong,2011-9-26,end*/
-	int DownloadNewLog;
-	/*support RS485 reader*/
-	int RS485Port;
-	int InBIOComType;
-	int Reader485FunOn;
-	int Reader485On;
-	/*end rs485*/
-	int ZEM800Platform;
-	int VideoWidth;
-	int VideoHeight;
-	int WifiModule;
-	int LoopWriteRecordOn; 		/*When the record capacity is full, Overwrite the old record*/
-	int BitsInvertCardModule;
-	int CardNumberParity;
-	/**************************************************
-	 *Number printed on the card . 0010930095  166.51119
-	 *Number Reading by want : 16651119
-	 *parameter explain:
-	 *cardNum int : the card number is 0010930095
-	 *readCardStyle int : the style for read cardnum;
-	 *explain:
-	 *IDCardStyle=0 read card num is 0010930095
-	 *IDCardStyle=1 read card num is 16651119
-	 *IDCardStyle=2 read card num is 51119
-	 ***************************************************/
-	int IDCardStyle;
-	int StartPosition;		// The start position of the card number,1 means staring from the first digit in a selected
-	int CardNumberLen;		// The length of the card number.
-	int DelPictureCnt;		//When picture capacity is full, auto delete xxx the old picture
-	int IsWGSRBFunOn;		//support srb fun
-	int SRBOn;				//srb on
-	int SRBType;			//srb type
-	int FingerMaxRotation;	//支持指纹旋转的最大度数,范围是0～180，不旋转则默认值30，支持360度旋转则设置值为180.
-	int RegistOpenFlag;
-	int MFCardError;
-	int ReadCardInterval;
-}TOptions, *POptions;
+    int ttsIntegralPointOpen; //TTS integral point give the correct time
+
+    //拍照机器，能保存考勤照片的最大值
+    int maxCaptureCount; //max capture picture, default 8000
+
+    TTS_OPTION int TTS_S;
+    TTS_OPTION int TTS_VERIFY;
+    TTS_OPTION int TTS_SMS;
+    TTS_OPTION int TTS_LOGO;
+    TTS_OPTION int TTS_ENROLL;
+    TTS_OPTION int TTS_REC;
+    TTS_OPTION int TTS_KEY;
+    TTS_OPTION int TTS_STATE;
+    TTS_OPTION int TTS_TIME;
+    TTS_OPTION int TTS_MENU;
+
+    int FreeTime; //free time
+    //这个参数用于连接断开的时候，是否需要关闭beep声
+    int EnableCommEndBeep; //enable commu end beep
+    //这是视频显示是否旋转的参数，主要是为了在登记用户的时候，
+    //不支持此功能，需要屏蔽掉,但是其它设置界面需要此功能，默认为1；
+    int enableVideoRotate;
+    /*
+     * 键盘类型配置主要针对彩屏中比较特殊的键盘而设置的，在固件中做键盘映射功能：
+     * KeyType=1 代表B3键盘类型的机器，这些是定制
+     * KeyType=2 代表ICS01键盘类型的机器，这些是定制
+     *
+     *
+     */
+    int KeyType;
+
+    //add by caona for face
+    int FaceFunOn;
+    int DefFaceGroup;
+    int FaceVThreshold;
+    int FaceMThreshold;
+    int MaxFaceCount;
+    int FaceRegMode;
+    int FaceExposoure;
+    int FaceExposRang;
+    int VideoGain;
+    int VideQuality;
+    //int UploadPhoto;	//seiya dlphoto end
+    int IsUploadPhotoOnly;
+    //when open ADMS, if 1, All functions of ADMS except upload photo can be used; if 0, all can be used.
+    BYTE DNS[4]; //DNS
+    int IsSupportDNS;
+    int RS232FunOn;
+    int RS485FunOn;
+    BYTE IclockSvrURL[128];
+    int WebServerURLModel;
+    int IsSupportFlowCtrl;
+    BYTE OptionsPassword[64];
+    int IsRotatePhoto;
+    /*异地考勤,add by yangxiaolong,2011-06-14,start*/
+    int RemoteAttFunOn; //异地考勤开关，1:open，0:close.默认为开
+    int RmUserSaveTime; //异地考勤用户保存时间，以天为单位。默认为5天
+    /*异地考勤,add by yangxiaolong,2011-06-14,end*/
+    int USBCheckTime; //add by lihm	 几秒进行一次U盘检测
+    int USBFileCount; //add by lihm 针对ZEM510 /proc/bus/usb/001 在没有插U盘时有几个目录
+    int USBCheckOn; //add by lihm  U盘检测功能开关
+    /*增加pushsdk对高级门禁的支持，add by yangxiaolong,2011-9-26,start*/
+    int PushLockFunOn; // 1,支持；0不支持
+    /*增加pushsdk对高级门禁的支持，add by yangxiaolong,2011-9-26,end*/
+    int DownloadNewLog;
+    /*support RS485 reader*/
+    int RS485Port;
+    int InBIOComType;
+    int Reader485FunOn;
+    int Reader485On;
+    /*end rs485*/
+    int ZEM800Platform;
+    int VideoWidth;
+    int VideoHeight;
+    int WifiModule;
+    int LoopWriteRecordOn; /*When the record capacity is full, Overwrite the old record*/
+    int BitsInvertCardModule;
+    int CardNumberParity;
+    /**************************************************
+     *Number printed on the card . 0010930095  166.51119
+     *Number Reading by want : 16651119
+     *parameter explain:
+     *cardNum int : the card number is 0010930095
+     *readCardStyle int : the style for read cardnum;
+     *explain:
+     *IDCardStyle=0 read card num is 0010930095
+     *IDCardStyle=1 read card num is 16651119
+     *IDCardStyle=2 read card num is 51119
+     ***************************************************/
+    int IDCardStyle;
+    int StartPosition; // The start position of the card number,1 means staring from the first digit in a selected
+    int CardNumberLen; // The length of the card number.
+    int DelPictureCnt; //When picture capacity is full, auto delete xxx the old picture
+    int IsWGSRBFunOn; //support srb fun
+    int SRBOn; //srb on
+    int SRBType; //srb type
+    int FingerMaxRotation; //支持指纹旋转的最大度数,范围是0～180，不旋转则默认值30，支持360度旋转则设置值为180.
+    int RegistOpenFlag;
+    int MFCardError;
+    int ReadCardInterval;
+} TOptions, *POptions;
 
 #define optoffset(field) offsetof(TOptions, field)
 
 POptions LoadOptions(POptions opts);
+
 POptions SaveOptions(POptions opts);
+
 POptions GetDefaultOptions(POptions opts);
 
 typedef int (*StrConvertFun)(char *str, BYTE *value);
+
 typedef char *(*StrFormatFun)(char *str, BYTE *value);
+
 //new options
-typedef struct __OPTIONSRESSTR__{
-	char *OptionName;
-	int OptionLong;
-	char DefaultValue[256];
-	int IsNeedRestoreFactory;
-	int Offset;
-	StrConvertFun Convertor;
-	StrFormatFun Formator;
-	int IsEncrypt;
-}TOptionsResStr,*POptionsResStr;
-typedef struct __OPTIONSRESINT__{
-	char *OptionName;
-	int DefaultValue;
-	int IsNeedRestoreFactory;
-	int Offset;
-	int MenuResID;
-	int MaxValue;
-	int MinValue;
-	int IsEncrypt;
-}TOptionsResInt,*POptionsResInt;
+typedef struct __OPTIONSRESSTR__ {
+    char *OptionName;
+    int OptionLong;
+    char DefaultValue[256];
+    int IsNeedRestoreFactory;
+    int Offset;
+    StrConvertFun Convertor;
+    StrFormatFun Formator;
+    int IsEncrypt;
+} TOptionsResStr, *POptionsResStr;
+
+typedef struct __OPTIONSRESINT__ {
+    char *OptionName;
+    int DefaultValue;
+    int IsNeedRestoreFactory;
+    int Offset;
+    int MenuResID;
+    int MaxValue;
+    int MinValue;
+    int IsEncrypt;
+} TOptionsResInt, *POptionsResInt;
 
 #define OPTIONSRESSTRCOUNT		(sizeof(OptionsResStr)/sizeof(OptionsResStr[0]))
 extern TOptionsResStr OptionsResStr[];
 #define OPTIONSRESINTCOUNT		(sizeof(OptionsResInt)/sizeof(OptionsResInt[0]))
 extern TOptionsResInt OptionsResInt[];
+
 POptionsResInt QueryOptResByOffset(int Offset);
 
 BOOL SaveStr(const char *name, const char *value, int SaveTrue);
+
 BOOL RemoteSaveStr(const char *name, const char *value, int SaveTrue);
+
 BOOL LoadStr(const char *name, char *value);
+
 BOOL LoadCaseStr(const char *name, char *value);
+
 int LoadStrFromFile(int fd, const char *name, char *value, BOOL ExitSign, int offset);
+
 char *LoadStrOld(const char *name);
-char* LoadStrByID(int ID);
+
+char *LoadStrByID(int ID);
+
 //char* LoadStrByIDDef(int ID, const char *defStr);
-char* LoadStrByIDDef(int ID, char *defStr);
-char* LoadStrByIDPad(int ID, int Len);
-char* LoadStringLng(const char *Name, int LngID);
+char *LoadStrByIDDef(int ID, char *defStr);
+
+char *LoadStrByIDPad(int ID, int Len);
+
+char *LoadStringLng(const char *Name, int LngID);
+
 int LoadInteger(const char *Name, int DefaultValue);
+
 int SaveInteger(const char *Name, int Value);
+
 //从内存串列表中删除指定字符串
 U32 PackStrBuffer(char *Buffer, const char *name, int size);
-char* GetYesNoName(int Yes);
+
+char *GetYesNoName(int Yes);
+
 int InitOptions(void);
 
 extern TOptions gOptions;
@@ -849,37 +870,48 @@ extern TOptions gOptions;
 #define VERIFYPWD 2
 
 int FormatDate(char *buf, int index, int y, int m, int d);
+
 int FormatDate2(char *buf, int index, int m, int d);
+
 extern char *DateFormats[];
 
 int GetFileLength(int fd);
+
 void TruncOptionAndSaveAs(char *buffer, int size);
 
 void SelectLanguage(char Language);
+
 int GetDefaultLocaleID(void);
+
 char *GetLangName(char LngID);
+
 int GetSupportedLang(int *LngID, int MaxLngCnt);
 
 char *GetSMS(int UserID);
 
 BOOL ReadOneLine(int fd, char *dest, int *size);
-void SplitByChar(char *buffer, char *name, char * value, char DeliChar);
+
+void SplitByChar(char *buffer, char *name, char *value, char DeliChar);
 
 int ClearAllACOpt(int All);
+
 int ClearOptionItem(char *name);
 
 BOOL UpdateNetworkInfoByDHCP(char *dhcp);
 
 #ifndef URU
 int ReadSensorOptions(POptions opts);
+
 int WriteSensorOptions(POptions opts, int Rewrite);
-int EEPROMWriteOpt(BYTE * data, int size, int Rewrite);
+
+int EEPROMWriteOpt(BYTE *data, int size, int Rewrite);
 #endif
 
 char *GetCardKeyStr(char *Buffer, BYTE *Key);
+
 //2007.07.23
 int tftnewlng;
-int tftlocaleid;	//add by jazzy 2008.07.24 for mul language
+int tftlocaleid; //add by jazzy 2008.07.24 for mul language
 
 int issimcardright; //add by lyy for check sim card 2009.06.12
 
@@ -891,11 +923,13 @@ int issimcardright; //add by lyy for check sim card 2009.06.12
 #define MAX_CHAR_WIDTH 100
 
 int initLCDTypeOptions();
+
 //if no language will load this defaultlanguage, name "DefaultLanguage"
-char* LoadDefaultLanguageByID(int LanguageID);
+char *LoadDefaultLanguageByID(int LanguageID);
+
 void ExecuteActionForOption(const char *name, const char *value);
 
-char * ipformat(char *str, BYTE *value);
+char *ipformat(char *str, BYTE *value);
 
 #define LOG_VALID               0
 #define LOG_REPEAT              1
@@ -905,4 +939,3 @@ char * ipformat(char *str, BYTE *value);
 #define LOG_ANTIPASSBACK        512             //反潜
 
 #endif
-

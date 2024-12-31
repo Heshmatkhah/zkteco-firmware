@@ -1,19 +1,33 @@
-arm := y
+#arm := y
 #mips26:= y
+#x86 := y
+apple := y
 
 ifdef arm
-CC=arm-linux-gcc
-LD=arm-linux-ld
-AR=arm-linux-ar
+	CC=arm-linux-gcc
+	LD=arm-linux-ld
+	AR=arm-linux-ar
 else
 ifdef mips26
-CC = mipsel-linux-gcc
-LD = mipsel-linux-ld
-AR = mipsel-linux-ar
+	CC = mipsel-linux-gcc
+	LD = mipsel-linux-ld
+	AR = mipsel-linux-ar
 else
-CC = mipsel-gcc
-LD = mipsel-ld
-AR = mipsel-ar
+ifdef x86
+	CC = gcc
+	LD = ld
+	AR = ar
+else
+ifdef apple
+	CC = clang
+	LD = ld
+	AR = ar
+else
+	CC = mipsel-gcc
+	LD = mipsel-ld
+	AR = mipsel-ar
+endif
+endif
 endif
 endif
 
@@ -38,5 +52,5 @@ libhttppush.a:
 	$(AR)  -rcs $@  $(OBJCAT)
 
 clean :
-	rm *.o *.c~ *.d *.so *.a -rf 
+	rm *.o *.c~ *.d *.so *.a -rf
 

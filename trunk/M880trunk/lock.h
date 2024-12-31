@@ -4,6 +4,7 @@
 #define DB_LOCK "db.lock"
 
 int lockStart(const char *lockName);
+
 int lockEnd(const char *lockName);
 
 #endif
